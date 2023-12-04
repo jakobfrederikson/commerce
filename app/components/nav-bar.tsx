@@ -1,5 +1,6 @@
 import { CartIcon } from "./icons";
 import Link from "next/link";
+import Search from "./search";
 
 export default function Navbar() {
     return (
@@ -18,25 +19,36 @@ export default function Navbar() {
 
             <div id="navbarBasicExample" className="navbar-menu">
                 <div className="navbar-start">
-                <Link className="navbar-item" href="/search">
-                    All
-                </Link>
+                    <Link className="navbar-item" href="/search">
+                        All
+                    </Link>
 
-                <Link className="navbar-item" href="/search">
-                    Clothing
-                </Link>
+                    <Link className="navbar-item" href="/search?category=electronics">
+                        Electronics
+                    </Link>
 
-                <Link className="navbar-item" href="/search">
-                    Gifts
-                </Link>
+                    <Link className="navbar-item" href="/search?category=jewelery">
+                        Jewelery
+                    </Link>
+
+                    <Link className="navbar-item" href="/search?category=men's clothing">
+                        Mens Clothing
+                    </Link>
+
+                    <Link className="navbar-item" href="/search?category=women's clothing">
+                        Womens Clothing
+                    </Link>
+
+                    <Search />
                 </div>
+
+                
 
                 <div className="navbar-end">
                 <div className="navbar-item">
                     <Link href="/Cart">
                         <CartIcon />
-                    </Link>
-                    
+                    </Link>                    
                 </div>
                 </div>
             </div>

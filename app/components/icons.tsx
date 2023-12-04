@@ -4,11 +4,8 @@ export const CartIcon = () => {
     return (
         <div className="columns">
             <div className="column">
-                <a className="button">
-                    <ShoppingCartIcon width="23" height="23" />
-                </a>                
+                <ShoppingCartIcon className="has-text-black icon is-24x24"/>           
             </div>
-        </div>
-        
+        </div>        
     );
 }
